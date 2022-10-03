@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <title>addPost</title>
 </head>
-<body>
 
+<body>
+<header class="header">
+    <img class="user" src="user.png">
+    <a class="header-text" href=index.html>Home</a>
+</header>
+<div class="container">
+    <form id="addPost-form">
+        <div class="addPost-form">
+            <label for="addPostTextArea">Post body</label>
+            <textarea id="addPostTextArea" placeholder="add text here!" ></textarea>
+        </div>
+        <div class="addPost-form">
+            <label for="chooseFileBttn">Select file</label>
+            <input id="chooseFileBttn" type="submit" value="Choose file">
+        </div>
+        <div class="addPost-form">
+            <input class="submitButton" type="submit" value="Create Post">
+        </div>
+    </form>
+
+</div>
 </body>
 </html>
