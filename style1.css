@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0.5%;
+}
+
+.profile-picture{
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+nav{
+    order: 1;
+    background: #0082e6;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-inline: 12px;
+}
+
+nav ul{
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+nav > ul > li{
+    padding-inline: 20px;
+}
+
+nav > ul > li::after{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 1px;
+    left: 0;
+    transform: translateY(-10px) !important;
+    background-color: black;
+}
+li{
+    display: inline-block !important;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a:hover{
+    background-color: gray;
+    transition: 0.3s;
+}
+
+footer p{
+    margin-top: 15px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: solid black;
+    margin-bottom: 15px;
+    
+}
+
+footer{
+    display: flex;
+    height: 50px;
+    background: #0082e6;
+    width: 98%;
+    border-radius: 30px;
+    margin-left: 1%;
+    margin-bottom: 10px;
+}
+
+.linkcontainer > li{
+    border-right: 1px solid black;
+}
+.linkcontainer > li:last-child{
+    border-right: 0;
+}
+
+article{
+    max-width: auto;
+    padding: 5px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+article > section{
+    width: 100%;
+}
+
+.article-content > img{
+    max-width: 900px;
+    padding-top: 10px;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.flex-container{
+    display: flex;
+
+}
+
+.justify-space{
+    justify-content: space-between;
+}
+
+
+aside{
+    min-width: 100px;
+    flex-grow: 1;
+    background-color: gray;
+    margin-inline: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+main{
+    flex-grow: 0.5;
+}
+
+.article-details{
+    padding-top: 10px;
+}
+
+.article-details > span{
+    float: right;
+    color: white;
+}
+
+.article-content > p{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 17px;
+}
+
+.article-footer{
+    padding-bottom: 10px;
+}
+
+.article-footer > img{
+    margin: -16px;
+    
+}
+
+div p{
+    color: aquamarine;
+}
