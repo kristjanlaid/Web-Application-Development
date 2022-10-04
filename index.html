@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .flex-cointainer{
+            display: flex;
+        }
+        .flex-column{
+            flex-direction: column;
+        }
+        #para1{
+            color: green;
+            font-size: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div class="flex-container flex-column">
+    <header>
+    <nav>
+        <div class="profile-picture">
+            <img class="logo" src="user.png" width="64" height="64" alt=""/>
+        </div>
+        <ul class="linkcontainer">
+            <li><a class="active"href="#">Home</a></li>
+            <li><a href="addPOST.html">addPost</a></li>
+        </ul>
+    </nav>
+    </header>
 
+    <div class="flex-container">
+        <aside></aside>
+        <main class="flex-container flex-column justify-space">
+                <article>
+                    <section class="article-details">
+                        <img src="user.png" width="28" height="28" alt=""/>
+                        <span>29. December 2021</span>
+                    </section>
+                    <section  class="article-content">
+                        <img src="content.png" alt="">
+                        <p>test test test</p>
+                    </section>
+                    <section class="article-footer">
+                        <img src="like.png" width="64" height="64" alt="">
+                    </section>
+                </article>
+                <article>
+                    <section class="article-details">
+                        <img src="user.png" width="28" height="28" alt=""/>
+                        <span>1. December 2022</span>
+                    </section>
+                    <section  class="article-content">
+                        <p>test test test
+                            something something etc
+                        </p>
+                    </section>
+                    <section class="article-footer">
+                        <img src="like.png" width="64" height="64" alt="">
+                    </section>
+                </article>
+                <article>
+                    <section class="article-details">
+                        <img src="user.png" width="28" height="28" alt=""/>
+                        <span>1. December 2022</span>
+                    </section>
+                    <section  class="article-content">
+                        <img src="land.jpg" alt="">
+                        <p>test test test</p>
+                    </section>
+                    <section class="article-footer">
+                        <img src="like.png" width="64" height="64" alt="">
+                    </section>
+                </article>
+                <article>
+                    <section class="article-details">
+                        <img src="user.png" width="28" height="28" alt=""/>
+                        <span>29. December 2022</span>
+                    </section>
+                    <section  class="article-content">
+                        <img src="content.png" alt="">
+                        <p>test test test</p>
+                    </section>
+                    <section class="article-footer">
+                        <img src="like.png" width="64" height="64" alt="">
+                    </section>
+                </article>
+                <article>
+                    <section class="article-details">
+                        <img src="user.png" width="28" height="28" alt=""/>
+                        <span>2. December 2022</span>
+                    </section>
+                    <section  class="article-content">
+                        <img src="content.png" alt="">
+                        <p>test test test</p>
+                    </section>
+                    <section class="article-footer">
+                        <img src="like.png" width="64" height="64" alt="">
+                    </section>
+                </article>
+        </main>
+        <aside></aside>
+    </div>
+    
+    <footer>
+        <p id="para1">footer area</p>
+    </footer>
+    </div>
 </body>
 </html>
