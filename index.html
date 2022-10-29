@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="style1.css">
+
+    <script>
+        async function loadPosts() {
+            const posts = await fetch("./data.json").then(res => res.json());
+            console.log(posts)
+
+        }        
+        loadPosts();
+    </script>
     <style>
         .flex-cointainer{
             display: flex;

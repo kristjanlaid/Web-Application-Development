@@ -1,0 +1,38 @@
+[
+    {
+        "post_id": 1,
+        "year": "2022.01.13",
+        "post_text": "asdadasdsad",
+        "like_img": "asd",
+        "post_profile_img": "asd"
+    },
+    {
+        "post_id": 2,
+        "year": "2022.01.13",
+        "post_text": "asdadasdsad",
+        "like_img": "asd",
+        "post_profile_img": "asd"
+    },
+    {
+        "post_id": 3,
+        "year": "2022.01.13",
+        "post_text": "asdadasdsad",
+        "like_img": "asd",
+        "post_profile_img": "asd"
+    },
+    {
+        "post_id": 4,
+        "year": "2022.01.13",
+        "post_text": "asdadasdsad",
+        "like_img": "asd",
+        "post_profile_img": "asd"
+    },
+    {
+        "post_id": 5,
+        "year": "2022.01.13",
+        "post_text": "asdadasdsad",
+        "like_img": "asd",
+        "post_profile_img": "asd"
+    }
+    
+]
