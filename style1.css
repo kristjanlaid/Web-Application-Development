@@ -139,6 +139,15 @@ aside{
     margin-bottom: 20px;
 }
 
+bside{
+     min-width: 100px;
+     flex-grow: 1;
+     background-color: transparent;
+     margin-inline: 20px;
+     border-radius: 20px;
+     margin-bottom: 20px;
+ }
+
 main{
     flex-grow: 0.5;
 }
@@ -170,4 +179,23 @@ main{
 
 div p{
     color: aquamarine;
+}
+
+.submitButton{
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+}
+.addPost-form{
+    font-family: "sans-serif";
+    font-size:20px;
+    text-align: center;
+    padding: 20px 20px 0;
+    margin:0;
+    font-weight: bold;
+}
+
+.addPost-form textarea {
+    resize: none;
+    flex-grow: 1;
 }
