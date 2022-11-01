@@ -199,3 +199,40 @@ div p{
     resize: none;
     flex-grow: 1;
 }
+
+.dropdownbtn {
+    color: white;
+    padding: 32px;
+    border: none;
+    cursor: pointer;
+    background: url(user.png) no-repeat;
+    background-size: 64px 64px;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 10px;
+    right: 0;
+    left: auto;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}

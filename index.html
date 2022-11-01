@@ -7,69 +7,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="style1.css">
 
-    <script>
-        const footerImgUrl = "./like.png";
-
-        function createPost(postData) {
-            const article = document.createElement("article");
-            const articleDetails = document.createElement("section");
-            const userImg = document.createElement("img");
-            userImg.height = 28;
-            userImg.width = 28;
-            userImg.src = postData.post_profile_img;
-
-            const date = document.createElement("span");
-            date.innerText = postData.year;
-
-            articleDetails.appendChild(userImg);
-            articleDetails.appendChild(date);
-            articleDetails.className = "article-details";
-            article.appendChild(articleDetails);
-
-            const articleContent = document.createElement("section");
-            const articleImg = document.createElement("img");
-            //userImg.height = 28;
-            //userImg.width = 28;
-            articleImg.src = postData.post_img;
-
-            const content = document.createElement("p");
-            content.innerText = postData.post_text;
-
-            articleContent.appendChild(articleImg);
-            articleContent.appendChild(content);
-            articleContent.className = "article-content";
-            article.appendChild(articleContent);
-
-
-            const articleFooter = document.createElement("section");
-            const articleFooterImg = document.createElement("img");
-            articleFooterImg.height = 64;
-            articleFooterImg.width = 64;
-            articleFooterImg.src = footerImgUrl;
-
-            articleFooter.appendChild(articleFooterImg);
-            articleFooter.className = "article-footer";
-            article.appendChild(articleFooter);
-
-            return article;
-        }
-
-        async function loadPosts() {
-            //const posts = await fetch("./data.json").then(res => res.json());
-            const posts = await fetch("https://raw.githubusercontent.com/capnarchie/capnarchie.github.io/main/data.json").then(res => res.json());
-            console.log(posts);
-
-            const postsElement = document.querySelector("#posts");
-
-            for(const post of posts) {
-                postsElement.appendChild(createPost(post));
-            }
-
-        }        
-        loadPosts();
-    </script>
+    <script src="post.js"></script>
     <style>
-        .flex-cointainer{
+        .flex-cointainer {
             display: flex;
         }
         .flex-column{
@@ -85,9 +25,16 @@
     <div class="flex-container flex-column">
     <header>
     <nav>
-        <div class="profile-picture">
-            <img class="logo" src="user.png" width="64" height="64" alt=""/>
+        <div class="dropdown profile-picture">
+            <button id="dropdown-button" class="dropdownbtn"></button>
+            <div id="user-dropdown" class="dropdown-content">
+                <a href="#">John Doe</a>
+                <a href="mailto:john.doe@ut.ee">john.doe@ut.ee</a>
+                <a href="login.html">Log out</a>
+            </div>
+<!--             <img class="logo" src="user.png" width="64" height="64" alt=""/>-->
         </div>
+        <script src="app.js"></script>
         <ul class="linkcontainer">
             <li><a class="active"href="#">Home</a></li>
             <li><a href="addPOST.html">Add Post</a></li>
