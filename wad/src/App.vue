@@ -2,6 +2,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import navbarVue from './components/navbar.vue';
+import footerVue from './components/footer.vue';
 </script>
 
 
@@ -18,17 +19,21 @@ import navbarVue from './components/navbar.vue';
     </div>
   </header> -->
   <navbarVue></navbarVue>
+  <!--to be able to do async-->
   <Suspense>
     <RouterView />
   </Suspense>
+  <footerVue></footerVue>
 </template>
 
 <script>
-  import navbar from './components/navbar.vue';
+import navbar from './components/navbar.vue';
+import footer from './components/footer.vue';
   
   export default {
     components: {
       navbar: navbar,
+      footer: footer,
     },
   };
 </script>

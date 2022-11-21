@@ -52,9 +52,9 @@
                 <bside></bside>
             </div>//-->
 
-            <footer>
+            <!--<footer>
                 <p id="para1">footer area</p>
-            </footer>
+            </footer>-->
         </div>
     </body>
 </template>
