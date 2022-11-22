@@ -234,3 +234,52 @@ div p{
 .show {
     display: block;
 }
+
+.signup-form {
+}
+
+.signup-row {
+}
+
+.signup-label {
+}
+
+.signup-input {
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container input {
+    width: 100%;
+    border-radius: 20px;
+    height: 30px;
+    padding-left: 10px;
+    border-color: #0082e6;
+}
+
+.container label {
+    font-size: 20px;
+
+}
+
+.container button {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    background: #0082e6;
+    border-color: #0082e6;
+}
+
+.error {
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    background: indianred;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+}
