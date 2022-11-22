@@ -1,15 +1,20 @@
 import { createStore } from 'vuex'
-import * as asd from 'vuex'
 import axios from 'axios'
+import { VueElement } from 'vue'
 export default createStore( {
     state: {
-        json_data: ""
+        json_data: "",
+        counter: 0
     },
     //cant do async
     //use this to change data in state
     mutations: {
         setData(state, data) {
             state.json_data = data
+        },
+        increment(state, data) {
+            console.log(state.counter)
+            state.counter++
         }
     },
     //async func here
@@ -21,4 +26,5 @@ export default createStore( {
         }
     }
 })
+
 

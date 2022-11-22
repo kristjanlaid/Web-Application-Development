@@ -22,5 +22,5 @@ export default {
         <Post v-for="post in posts" :key="post.post_id" :post="post" />
     </main>
     
-    <div>{{ JSON.stringify($store.state.json_data) }}</div>
+    <!--<div>{{ JSON.stringify($store.state.json_data) }}</div>-->
 </template>
