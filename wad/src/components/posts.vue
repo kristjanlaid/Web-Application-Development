@@ -10,11 +10,6 @@ export default {
       Post
     },
 }
-
-</script>
-
-<script>
-
 </script>
 
 <template>

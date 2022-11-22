@@ -13,8 +13,8 @@ export default createStore( {
             state.json_data = data
         },
         increment(state, data) {
-            console.log(state.counter)
             state.counter++
+            console.log(state.counter)
         }
     },
     //async func here

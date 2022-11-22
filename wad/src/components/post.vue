@@ -22,7 +22,7 @@ export default {
 
 
 <template>
-    <article>
+    <article :id="post.post_id">
         <section class="article-details"><img height="28" width="28" :src="post.post_profile_img"><span>{{ post.year }}</span></section>
         <section class="article-content"><img :src="post.post_img">
             <p>{{ post.post_text }}</p>
