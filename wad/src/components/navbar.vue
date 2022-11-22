@@ -31,7 +31,7 @@ export default {
         </div>
 
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/login">Login</RouterLink>
+          <RouterLink to="/signup">signup</RouterLink>
           <RouterLink to="/addPOST">addPOST</RouterLink>
         </div>
     </div>

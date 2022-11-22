@@ -29,6 +29,7 @@ import footerVue from './components/footer.vue';
 <script>
 import navbar from './components/navbar.vue';
 import footer from './components/footer.vue';
+
   
   export default {
     components: {
@@ -41,6 +42,11 @@ import footer from './components/footer.vue';
 
 
 <style>
+#app{
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
+}
 
 </style>
