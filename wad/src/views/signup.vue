@@ -25,6 +25,7 @@
 
 <script>
 import Validation from "@/services/Validation";
+
 import router from "@/router";
 
 export default {
@@ -55,5 +56,9 @@ export default {
 </script>
 
 <style scoped>
-
+.container{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 </style>
