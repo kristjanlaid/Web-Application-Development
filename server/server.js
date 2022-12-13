@@ -125,7 +125,7 @@ app.delete('/posttable', async(req, res) => {
 
 
 // is used to check whether a user is authinticated
-app.get('/userlogin', async(req, res) => {
+app.get('/authenticate', async(req, res) => {
     console.log('authentication request has been arrived');
     const token = req.cookies.jwt; // assign the token named jwt to the token const
     //console.log("token " + token);
@@ -155,7 +155,7 @@ app.get('/userlogin', async(req, res) => {
 });
 
 // signup a user
-app.post('/userlogin', async(req, res) => {
+app.post('/usersignup', async(req, res) => {
     try {
         console.log("a signup request has arrived");
         //console.log(req.body);
@@ -171,11 +171,7 @@ app.post('/userlogin', async(req, res) => {
         //console.log(token);
         //res.cookie("isAuthorized", true, { maxAge: 1000 * 60, httpOnly: true });
         //res.cookie('jwt', token, { maxAge: 6000000, httpOnly: true });
-        res
-            .status(201)
-            .cookie('jwt', token, { maxAge: 6000000, httpOnly: true })
-            .json({ user_id: authUser.rows[0].id })
-            .send;
+        res.status(201).cookie('jwt', token, {maxAge:6000000, httpOnly: true}).json({user_id: authUser.rows[0].id}).send();
     } catch (err) {
         console.error(err.message);
         res.status(400).send(err.message);
@@ -183,7 +179,7 @@ app.post('/userlogin', async(req, res) => {
 });
 //add different url here and it should work
 //login
-app.post('/userlogin', async(req, res) => {
+app.post('/auth/login', async(req, res) => {
     try {
         console.log("a login request has arrived");
         const { username, password } = req.body;
@@ -209,7 +205,7 @@ app.post('/userlogin', async(req, res) => {
             .status(201)
             .cookie('jwt', token, { maxAge: 6000000, httpOnly: true })
             .json({ user_id: user.rows[0].id })
-            .send;
+            .send();
     } catch (error) {
         res.status(401).json({ error: error.message });
     }
@@ -217,9 +213,9 @@ app.post('/userlogin', async(req, res) => {
 
 // change url here too 
 //logout a user = deletes the jwt
-app.get('/userlogin', (req, res) => {
+app.get('/userlogout', (req, res) => {
     console.log('delete jwt request arrived');
-    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
+    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send('cookie cleared');
 });
 
 app.listen(port, () => {

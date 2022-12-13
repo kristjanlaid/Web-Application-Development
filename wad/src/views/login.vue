@@ -13,19 +13,20 @@
 
         </div>
         <div class="login-item">
-            <form action="index.html" class="form form-login">
+            <form action="/" class="form form-login">
                 <div class="form-field">
-                    <label class="" for="login-username"></label>
-                    <input id="login-username" type="text" class="form-input" placeholder="Email" required>
+                    <label class="" for="email"></label>
+                    <input id="email" name="email" type="text" class="form-input" placeholder="Email" required>
                 </div>
 
                 <div class="form-field">
-                    <label class="lock" for="login-password"></label>
-                    <input id="login-password" type="password" class="form-input" placeholder="Password" required>
+                    <label class="lock" for="password"></label>
+                    <input id="password" name="password" type="password" class="form-input" placeholder="Password" required >
                 </div>
 
                 <div class="form-field">
-                    <input type="submit" value="Log in">
+                    <input type="submit" value="Log in" @click="LogIn">
+                    <button @click='this.$router.push("/signup")' class="center">Signup</button>
                 </div>
                 <div class="forget">Forget password</div>
             </form>
@@ -34,6 +35,25 @@
 
 </body>
 </template>
+
+<script>
+export default {
+  LogIn() {
+    var data = {email: this.email, password: this.password};
+    fetch("http://localhost:3000/auth/login", {
+      method: "POST",
+      headers: {"Content-Type": "application/json",},
+      credentials: 'include', // Don't forget to specify this if you need cookies
+      body: JSON.stringify(data)})
+        .then((response) => response.json())
+        .then(() => {
+          console.log(data);
+          location.assign("/");})
+        .catch((e) => {
+          console.log("error");});
+  }
+}
+</script>
 
 <style scoped>
 

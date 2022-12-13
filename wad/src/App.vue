@@ -8,16 +8,6 @@ import footerVue from './components/footer.vue';
 
 
 <template>
-  <!-- <header>
-  
-    <div class="wrapper">
-        <div class="navbar">
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/addPOST">addPOST</RouterLink>
-          <RouterLink to="/homepage">homepage</RouterLink>
-        </div>
-    </div>
-  </header> -->
   <navbarVue></navbarVue>
   <!--to be able to do async-->
   <Suspense>

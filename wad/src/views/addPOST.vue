@@ -1,13 +1,6 @@
 <script>
-//import Posts from "../components/posts.vue";
 
 export default {
-  //components: {
-    //Posts
-  //},
-  //setup() {
-
-  //},
   methods: {
     addPost() {
       console.log("addpost button clicked");

@@ -1,7 +1,7 @@
 const Pool = require('pg').Pool;
 const pool = new Pool({
     user: "postgres",
-    password: "root",
+    password: "Leopard1996",
     database: "testWad",
     host: "localhost",
     port: "5432"
@@ -31,11 +31,11 @@ const createTblQuery = `
         "like_count" int    
     );`;
 
-    const createUserTblQuery = `
+const createUserTblQuery = `
     CREATE TABLE IF NOT EXISTS "userlogin" (         
-	    "username" VARCHAR(200) NOT NULL,
-	    "password" VARCHAR(200) NOT NULL  
-    );`;
+        "username" VARCHAR(200) NOT NULL,
+        "password" VARCHAR(200) NOT NULL  
+);`;
 
 // A function to execute the previous query   
 execute(createTblQuery).then(result => {
