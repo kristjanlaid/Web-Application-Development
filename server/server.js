@@ -94,7 +94,7 @@ app.put('/posttable:id', async(req, res) => {
         const post = req.body;
         console.log("update request has arrived");
         const updatepost = await pool.query(
-            "UPDATE posttable SET (title, body, urllink) = ($2, $3, $4) WHERE id = $1", [id, post.title, post.body, post.urllink]
+            "UPDATE posttable SET (year, post_text, like_img, profile_img, content_img, like_count) = ($2, $3, $4, $5, $6, $7) WHERE id = $1", [id, post.year, post.post_text, post.like_img, post.profile_img, post.content_img, post.like_count]
         );
         res.json(updatepost);
     } catch (err) {
@@ -105,7 +105,7 @@ app.put('/posttable:id', async(req, res) => {
 // Empties the posttable table but retains directory structure
 app.delete('/posttable', async(req, res) => {
     try {
-        const { id } = req.params;
+        //const { id } = req.params;
         //const post = req.body; // we do not need a body for a delete request
         console.log("delete a post request has arrived");
         const deletepost = await pool.query(
