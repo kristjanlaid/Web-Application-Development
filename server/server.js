@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 
 
-app.use(cors({ origin: 'http://localhost:8080', credentials: true }));
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 // We need to include "credentials: true" to allow cookies to be represented
 // Also "credentials: 'include'" need to be added in Fetch API in the Vue.js App
 
