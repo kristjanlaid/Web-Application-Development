@@ -37,8 +37,6 @@
 
 <style scoped>
 
-
-
 .header {
     height: 2.3em;
     font-size: 32px;
