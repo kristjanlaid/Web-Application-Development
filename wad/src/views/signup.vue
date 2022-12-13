@@ -17,7 +17,7 @@
     </div>
 
     <div class="signup-submit">
-      <button type="submit">Signup</button>
+      <button type="submit" @click="SignUp()">Signup</button>
     </div>
   </form>
 </div>
@@ -41,15 +41,51 @@ export default {
       let valids = new Validation(this.email, this.password);
 
       this.errors = valids.checkValid();
-
+      console.log(this.errors.length)
       if (this.errors.length) {
         return false;
 
       }
     },
     goToHomePage() {
-      return router.push({name: 'home'});
-    }
+      console.log("hello")
+      return this.$router.push();
+    },
+
+
+    SignUp() {
+      let valids = new Validation(this.email, this.password);
+
+      this.errors = valids.checkValid();
+      console.log(this.errors.length)
+      if (this.errors.length) {
+        return false;
+      }
+
+
+      var data = {
+        username: this.email,
+        password: this.password
+      };
+      // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
+      fetch("http://localhost:3000/userlogin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+          body: JSON.stringify(data),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+      console.log(data);
+      this.$router.push("/");
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error");
+      });
+    }, 
   }
 
 }
