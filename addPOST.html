@@ -8,11 +8,9 @@
         <link rel="stylesheet" href="style1.css">
 
         <script>
-            function addPost(){
-                //under dev.
+            async function addPost(){
+                console.log("submit button clicked");
             }
-
-            addPost();
         </script>
 
         <style>
@@ -30,23 +28,6 @@
     </head>
 
     <body>
-    <!--
-        <div class="flex-container">
-            <form id="addPost-form">
-                <div class="addPost-form">
-                    <label for="addPostTextArea">Post body</label>
-                    <textarea id="addPostTextArea" placeholder="add text here!" ></textarea>
-                </div>
-                <div class="addPost-form">
-                    <label for="chooseFileBttn">Select file</label>
-                    <input id="chooseFileBttn" type="submit" value="Choose file">
-                </div>
-                <div class="addPost-form">
-                    <input class="submitButton" type="submit" value="Create Post">
-                </div>
-            </form>
-        </div>
-    //-->
         <div class="flex-container flex-column">
             <header>
                 <nav>
@@ -58,30 +39,26 @@
                     </ul>
                 </nav>
             </header>
-
+            <bside></bside>
             <div class="flex-container">
                 <form id="addPost-form">
-                    <div>
+                    <!--<div>
                         <label for="addPostTextArea">Post body</label>
                         <textarea id="addPostTextArea" placeholder="add text here!" ></textarea>
                     </div>
                     <div>
                         <label for="chooseFileBttn">Select file</label>
-                        <input id="chooseFileBttn" type="submit" value="Choose file">
+                        <input id="chooseFileBttn" type="file" value="Choose file">
                     </div>
                     <div>
-                        <input class="submitButton" type="submit" value="Create Post">
-                    </div>
+                        <input id="submit" class="submitButton" type="submit" value="Create Post" onclick="addPost()">
+                    </div>-->
+                    Post text: <textarea id="addPostTextArea" placeholder="add text here!" ></textarea><br>
+                    Add a file: <input id="chooseFileBttn" type="file" value="Choose file"><br><br>
+                    <input id="submit" class="submitButton" type="submit" value="Create Post" onclick="addPost()">
                 </form>
             </div>
-
-            <!--<div class="flex-container">
-                <bside></bside>
-                <main class="flex-container flex-column justify-space" id="posts">
-                </main>
-                <bside></bside>
-            </div>//-->
-
+            <bside></bside>
             <footer>
                 <p id="para1">footer area</p>
             </footer>

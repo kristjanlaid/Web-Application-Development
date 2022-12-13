@@ -1,35 +1,44 @@
 <script>
-  function addPost(){
-    console.log("addpost")
-  }
+//import Posts from "../components/posts.vue";
 
-  addPost();
+export default {
+  //components: {
+    //Posts
+  //},
+  //setup() {
+
+  //},
+  methods: {
+    addPost() {
+      console.log("addpost button clicked");
+
+    }
+  }
+}
 </script>
 
 <template>
-<body>
-
-        <div class="flex-container flex-column">
-            <div class="flex-container">
-              <bside></bside>
-              <form class="flex-container flex-column justify-space" id="addPost-form" >
-                  <div>
-                      <label for="addPostTextArea">Post body</label>
-                      <textarea id="addPostTextArea" placeholder="add text here!" ></textarea>
-                  </div>
-                  <div>
-                      <label for="chooseFileBttn">Select file</label>
-                      <input id="chooseFileBttn" type="file" value="Choose file">
-                  </div>
-                  <div>
-                      <input class="submitButton" type="submit" value="Create Post">
-                  </div>
-              </form>
-              <bside></bside>
-            </div>
-        </div>
-
-    </body>
+  <body>
+    <div class="flex-container flex-column">
+      <div class="flex-container">
+        <bside></bside>
+        <form class="flex-container flex-column justify-space" id="addPost-form" action="/">
+          <div>
+            <label for="addPostTextArea">Post body</label><br>
+            <textarea id="addPostTextArea" placeholder="add text here!" ></textarea>
+          </div>
+          <div>
+            <label for="inFile">Select file</label><br>
+            <input type="file" id="inFile"><br>
+          </div>
+          <div>
+            <input class="submitButton" type="submit" value="Create Post" @click="addPost">
+          </div>
+        </form>
+        <bside></bside>
+      </div>
+    </div>
+  </body>
 </template>
 
 <style>

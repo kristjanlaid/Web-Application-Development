@@ -11,22 +11,20 @@ export default {
     },
     name: 'counter',
     methods: {
-        reset() {
-            this.$store.commit('reset')
+      resetLike(){
+        console.log("resetLikes pressed!")
         },
-
         DeleteAll() {
-            
-        }
         
-    }
+      }
+  }
 }
 </script>
 
 <template>
     <main class="flex-container flex-column justify-space" id="posts">
-        <Post v-for="post in posts" :key="post.post_id" :post="post" />
-        <button class="reset" @click="reset()">reset likes</button>
+        <Post v-for="post in posts" :key="post.post_id" :post="post"/>
+        <button class="reset" @click="resetLike" ref="resetButton">reset likes</button>
         <button class="delete" @click="DeleteAll()">delete posts</button>
     </main>
 
