@@ -13,8 +13,13 @@ export default {
     },
     methods: {
         increment() {
-            this.$store.commit('increment')
+            this.likeCount++;
         }
+    },
+    data(){
+      return{
+        likeCount : 0,
+      };
     }
 }
 </script>
@@ -28,7 +33,7 @@ export default {
             <p>{{ post.post_text }}</p>
         </section>
         <section class="article-footer"><img class="likebtn" @click="increment()" height="64" width="64" :src="post.like_img">
-            <p class="likes">{{ count }} likes</p>
+            <p class="likes">{{ likeCount }} likes</p>
         </section>
     </article>
 </template>
