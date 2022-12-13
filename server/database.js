@@ -28,10 +28,22 @@ const createTblQuery = `
         "urllink" VARCHAR(200)  
     );`;
 
+    const createUserTblQuery = `
+    CREATE TABLE IF NOT EXISTS "userlogin" (         
+	    "username" VARCHAR(200) NOT NULL,
+	    "password" VARCHAR(200) NOT NULL  
+    );`;
+
 // A function to execute the previous query   
 execute(createTblQuery).then(result => {
     if (result) {
-        console.log('If does not exists, create the "posttable" table');
+        console.log('If does not exist, create the "posttable" table');
+    }
+});
+
+execute(createUserTblQuery).then(result => {
+    if (result) {
+        console.log('If does not exist, create the "userlogin" table');
     }
 });
 
