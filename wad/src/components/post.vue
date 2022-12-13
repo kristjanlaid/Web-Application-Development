@@ -3,6 +3,7 @@
 </script>
 
 <script>
+
 export default {
     props: ['post'],
     name: 'counter',
@@ -14,6 +15,9 @@ export default {
     methods: {
         increment() {
             this.likeCount++;
+        },
+        resetLikes(){
+          this.likeCount = 0;
         }
     },
     data(){
@@ -21,6 +25,7 @@ export default {
         likeCount : 0,
       };
     }
+
 }
 </script>
 
