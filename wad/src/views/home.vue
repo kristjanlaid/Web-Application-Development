@@ -3,18 +3,36 @@ import Posts from "../components/posts.vue";
 import { computed, VueElement } from 'vue'
 import { useStore } from 'vuex'
 export default {
+
     components: {
-      Posts
   },
-  setup() {
-    const store = useStore()
-  }
+   data: function() {
+    return {
+    posts:[ ]
+    }
+  },
+  methods: {
+  }, 
+  mounted() {
+        fetch('http://localhost:3000/posttable')
+        .then((response) => response.json())
+        .then(data => this.posts = data)
+        .catch(err => console.log(err.message))
+    }
+
+
+//     components: {
+//       Posts
+//   },
+//   setup() {
+//     const store = useStore()
+//   }
 }
 
 </script>
 
 <script setup>
-const posts = await fetch("https://raw.githubusercontent.com/capnarchie/capnarchie.github.io/main/data.json").then(data => data.json());
+//const posts = await fetch("https://raw.githubusercontent.com/capnarchie/capnarchie.github.io/main/data.json").then(data => data.json());
 </script>
 <template>
 <body>

@@ -26,7 +26,7 @@ export default {
             <div id="user-dropdown" class="dropdown-content" :class="{ show: showDropdown }">
                 <a href="#">John Doe</a>
                 <a href="mailto:john.doe@ut.ee">john.doe@ut.ee</a>
-                <a href="login.html">Log out</a>
+                <RouterLink to="/login">Log out</RouterLink>
             </div>
         </div>
 
